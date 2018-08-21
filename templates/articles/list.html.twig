@@ -1,0 +1,8 @@
+{# templates/article/list.html.twig #}
+{% extends 'base.html.twig' %}
+{% block body %}
+  <h1>Recent Articles</h1>
+  {% for article in articles %}
+    {{ include('articles/article_details.html.twig', {'article':article}) }}
+  {% endfor %}
+{% endblock %}
